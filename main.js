@@ -169,13 +169,13 @@ function draw() {
   drawGrid();
 
   if (gameState === "start") {
-    drawCenteredText("Aloita painamalla nuolinäppäintä", "white", 24);
+    drawCenteredText("Press the arrow key to Start", "white", 24);
     return;
   }
 
   if (gameState === "gameover") {
-    drawCenteredText("Peli päättyi", "red", 28);
-    drawCenteredText("Aloita uudelleen painamalla nuolinäppäintä", "white", 16, 40);
+    drawCenteredText("Game Over", "red", 28);
+    drawCenteredText("Press the arrow key to Restart", "white", 16, 40);
     return;
   }
 
@@ -200,4 +200,5 @@ function gameLoop(timestamp) {
 }
 
 requestAnimationFrame(gameLoop);
+
 
