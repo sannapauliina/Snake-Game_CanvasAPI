@@ -159,7 +159,7 @@ function drawScore() {
   ctx.font = "20px Arial";
   ctx.textAlign = "left";
   ctx.textBaseline = "top";
-  ctx.fillText("Pisteet: " + score, 10, 10);
+  ctx.fillText("Score: " + score, 10, 10);
 }
 
 // Pääpiirto
@@ -169,13 +169,13 @@ function draw() {
   drawGrid();
 
   if (gameState === "start") {
-    drawCenteredText("Press the arrow key to Start", "white", 24);
+    drawCenteredText("Press the arrow key to START", "white", 24);
     return;
   }
 
   if (gameState === "gameover") {
-    drawCenteredText("Game Over", "red", 28);
-    drawCenteredText("Press the arrow key to Restart", "white", 16, 40);
+    drawCenteredText("GAME OVER", "red", 28);
+    drawCenteredText("Press the arrow key to RESTART", "white", 16, 40);
     return;
   }
 
@@ -200,5 +200,6 @@ function gameLoop(timestamp) {
 }
 
 requestAnimationFrame(gameLoop);
+
 
 
